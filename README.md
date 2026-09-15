@@ -2,7 +2,7 @@
 
 A small Bash wrapper to launch SWAT 4 mod batch files under Wine.
 
-The script automatically detects its own location, changes into that directory, and starts the corresponding batch file. This makes it independent of the installation path and suitable for desktop shortcuts.
+The script automatically detects its own location, changes into that directory, and starts the corresponding batch file using Wine. This makes it independent of the installation path and suitable for desktop shortcuts.
 
 ## Features
 
@@ -16,7 +16,7 @@ The script automatically detects its own location, changes into that directory, 
 
 - Linux
 - Wine
-- A SWAT 4 mod that provides a batch launcher (e.g. `StartSEF.bat`)
+- A SWAT 4 mod that provides a batch launcher (e.g. `LaunchSEF.bat`)
 
 ## Installation
 
@@ -40,7 +40,7 @@ chmod +x bat-launcher.sh
 
 ```
 SEF_FR/
-├── StartSEF.bat
+├── LaunchSEF.bat
 └── bat-launcher.sh
 ```
 
@@ -53,7 +53,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 cd "$SCRIPT_DIR" || exit 1
 
-wine cmd /c StartSEF.bat
+wine start /unix LaunchSEF.bat
 ```
 
 By changing into its own directory before launching Wine, the batch file always starts with the correct working directory, regardless of where it was launched from.
