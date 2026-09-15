@@ -27,7 +27,7 @@ The script automatically detects its own location, changes into that directory, 
 chmod +x bat-launcher.sh
 ```
 
-3. Create a desktop launcher (optional).
+3. Create your desktop launcher.
 4. Set the launcher command to:
 
 ```text
