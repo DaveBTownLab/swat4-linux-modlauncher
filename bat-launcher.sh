@@ -4,4 +4,4 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 cd "$SCRIPT_DIR" || exit 1
 
-wine cmd /c LaunchSEF.bat
+wine start /unix LaunchSEF.bat
